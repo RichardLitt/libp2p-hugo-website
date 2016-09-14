@@ -1,10 +1,9 @@
 {{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL }}
 
 {{if .Params.cover}}
-	<header class="main-header" style="background-image: url({{ $baseurl }}{{.Params.cover}})">
+	<header class="main-header" style="background-image: url({{.Params.cover}})">
 {{else if .Site.Params.cover}}
-	<header class="main-header" style="background-image: url({{ $baseurl }}{{.Site.Params.cover}})">
+	<header class="main-header" style="background-image: url({{.Site.Params.cover}})">
 {{else}}
 	<header class="main-header tag-head no-cover">
 {{end}}
@@ -18,7 +17,7 @@
         <div class="main-header-content inner">
             <h1 class="page-title">
 
-              <a class="btn-bootstrap-2" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+              <a class="btn-bootstrap-2" href="">{{ .Site.Title }}</a>
           </h1>
         </div>
 </div>
