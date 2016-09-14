@@ -21,7 +21,7 @@ particlesJS("particles-js", {
       },
       "image": {
         "width": 100,
-        "height": 100
+        "height": 50
       }
     },
     "opacity": {
