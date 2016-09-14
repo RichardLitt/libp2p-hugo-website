@@ -1,9 +1,6 @@
 +++
 type = "index"
-title = "libp2p"
 +++
-
-# libp2p
 
 <style>
   a.nav-item {
