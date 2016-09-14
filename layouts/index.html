@@ -33,17 +33,23 @@
 
 <main id="content" class="content" role="main">
 
-    {{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
+    {{ range .Data.Pages }}
+        {{if eq .Type "index" }} 
 
-    <div class="extra-pagination inner">
-        {{ partial "pagination.html" $paginator }}
-    </div>
+        <article class="post {{ .Section }}">
 
-    {{ range $index, $page := $paginator.Pages }}
-        {{ .Render "li" }}
-    {{ end }}
+            <header class="post-header">
+                <h1 class="post-title">{{.Title}}</h1>
+            </header>
 
-    {{ partial "pagination.html" $paginator }}
+            <section class="post-content">
+              {{ .Content }}
+            </section>
+
+        </article>
+
+        {{end}}
+    {{end}}
 
 </main>
 
