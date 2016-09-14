@@ -13,9 +13,9 @@ type = "index"
 
 </style>
 
-<div class="nav" style="text-align:center;padding:30px; margin:0px auto;">
+<div style="text-align:center;padding:30px; margin:0px auto;">
   <a class="nav-item" href="#home">Home</a>
-  <a class="nav-item" href="{{ base }}/specs">Spec</a>
+  <a class="nav-item" href="/specs/">Spec</a>
 </div>
 
 While developing [IPFS](https://ipfs.io), we came to learn about the several challenges imposed by having to run a distributed file system on top of heterogeneous devices, with diferent network setups and capabilities. During this process, we had to constantly revisit the whole network stack and create solutions to overcome the obstacles imposed by design decisions of the several layers and protocols, without breaking compatibility or recreating technologies. This was a tedious, time consuming process.
