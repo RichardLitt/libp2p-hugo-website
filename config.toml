@@ -1,4 +1,5 @@
-BaseUrl= "http://syui.github.io/hugo-theme-air/"
+BaseUrl = "https://ipfs.io/"
+relativeURLs = true
 LanguageCode= "en-US"
 Title= "Hugo Theme Air"
 paginate = 5
