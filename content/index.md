@@ -18,27 +18,28 @@ type = "index"
   <a class="nav-item" href="/specs/">Spec</a>
 </div>
 
-While developing [IPFS](https://ipfs.io), we came to learn about the several challenges imposed by having to run a distributed file system on top of heterogeneous devices, with diferent network setups and capabilities. During this process, we had to constantly revisit the whole network stack and create solutions to overcome the obstacles imposed by design decisions of the several layers and protocols, without breaking compatibility or recreating technologies. This was a tedious, time consuming process.
+**libp2p**: a networking stack and library modularized out of [The IPFS Project](https://ipfs.io), and bundled separately for other tools to use.
 
+libp2p is the product of a long, and arduous quest of understanding -- a deep dive into the internet's network stack, and plentiful peer-to-peer protocols from the past.
 
-Instead of re-inventing the wheel every time we need to build a decentralized P2P application, we focused on streamlining the problem by tackling networking complexity in an abstract, general purpose way. The result is **libp2p**: a framework for simplifying networking with P2P applications. Developers decide on how they want their app to interop with others in the network, favoring configuration and extensibility instead of assumptions about networking setup. The goal is to enable rapid development of P2P applications for everyone.
+ Building large scale peer-to-peer systems has been complex and difficult in the last 15 years, and libp2p is a way to fix that. It is a "network stack" -- a protocol suite -- that cleanly separates concerns, and enables sophisticated applications to only use the protocols they absolutely need, without giving up interoperability and upgradeability. libp2p grew out of IPFS, but it is built so that lots of people can use it, for lots of different projects.
 
-**We are still actively developing libp2p, so expect the specification to change.**
+We will be writing a set of docs, posts, tutorials, and talks to explain what p2p is, why it is tremendously useful, and how it can help your existing and new projects.
 
 ## Goals and Requirements
 
-Our goals for libp2p specification and its implementations are:
+Our goals for the libp2p specification and its implementations are:
 
-- Enable the use of various transports (TCP, UDP, DTLS, uTP, etc)
-- Efficient use of sockets (connection reuse)
-- Enable communications between peers to be multiplex over one socket (avoiding handshake overhead)
-- Enable multiprotocols and respective versions to be used between peers, using a negotiation process.
-- Be backwards compatible
-- Work in current systems
-- Use the current network technologies to its best capability
-- Have NAT Traversal
-- Enable connections to be relayed
-- Enable encrypted channels
+- Enabling the use of various transports (TCP, UDP, DTLS, uTP, etc),
+- Efficient use of sockets (connection reuse),
+- Enabling communications between peers to be multiplexed over one socket (avoiding handshake overhead),
+- Enabling multiprotocols and respective versions to be used between peers, using a negotiation process,
+- To be backwards compatible,
+- To work in current systems,
+- Using the current network technologies to its best capability,
+- Having NAT Traversal,
+- Enableing connections to be relayed,
+- Enabling encrypted channels.
 
 ## Implementations <small>(note: work in progress!)</small>
 
